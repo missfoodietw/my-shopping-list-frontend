@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>採購清單產生器</title>
+    <style>
+        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #f4f4f9; }
+        .container { text-align: center; background: white; padding: 40px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        h1 { color: #333; }
+        input[type="file"] { margin: 20px 0; }
+        button { padding: 10px 20px; border: none; background-color: #007bff; color: white; border-radius: 5px; cursor: pointer; font-size: 16px; }
+        button:disabled { background-color: #ccc; }
+        #results { margin-top: 30px; text-align: left; white-space: pre-wrap; background: #eee; padding: 15px; border-radius: 5px; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>採購清單自動產生器</h1>
+        <p>請上傳您的蝦皮訂單 Excel 檔案</p>
+        <input type="file" id="orderFile" accept=".xlsx, .xls">
+        <br>
+        <button id="uploadButton">產生清單</button>
+        <div id="results" class="hidden">
+            <h2>處理中...</h2>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
